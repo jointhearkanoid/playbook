@@ -1,0 +1,14 @@
+---
+title: Software
+description: Installs preferred softwares 
+privilege: TrustedInstaller
+actions:
+
+  - !writeStatus: {status: Installing PatchMyPC...}
+  - !powerShell:
+    command: 'Invoke-WebRequest -Uri 'https://patchmypc.com/freeupdater/PatchMyPC.exe' -OutFile "C:\ArkanoidOS Program Hub\PROGRAMAS\PatchMyPC.exe" -UseBasicParsing -PassThru | Out-Null'
+
+  - !writeStatus: {status: Adding PatchMyPC to extended context menu...}
+  -
+
+  
