@@ -1,4 +1,5 @@
 :: Forked from Revision Playbook official GitHub's repo (https://github.com/meetrevision/playbook)
+:: Go check them out at https://revi.cc/
 @echo off
 set version=23.12
 for /f "tokens=2 delims==" %%i in ('wmic os get BuildNumber /value ^| find "="') do set "build=%%i"
