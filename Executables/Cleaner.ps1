@@ -1,4 +1,5 @@
 # Forked from Revision Playbook GitHub's repo: https://github.com/meetrevision/playbook
+# Go check them out at https://revi.cc/
 
 $ErrorActionPreference = 'SilentlyContinue'
 
