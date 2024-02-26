@@ -1,9 +1,13 @@
 title: Custom
-tasks:
-- features\HELIOSTechLabs\ArkanoidOS\registry.yml
-- features\HELIOSTechLabs\ArkanoidOS\appx.yml
-- features\HELIOSTechLabs\ArkanoidOS\components.yml
-- features\HELIOSTechLabs\ArkanoidOS\packages.yml
-- features\HELIOSTechLabs\ArkanoidOS\services.yml
-- features\HELIOSTechLabs\ArkanoidOS\software.yml
+description: Custom ArkanoidOS Lite configuration
+privilege: Admin
+actions: []
+features:
 - features\HELIOSTechLabs\ArkanoidOS\start.yml
+- features\HELIOSTechLabs\ArkanoidOS\registry.yml
+- features\HELIOSTechLabs\ArkanoidOS\software.yml
+- features\HELIOSTechLabs\ArkanoidOS\services.yml
+- features\HELIOSTechLabs\ArkanoidOS\components.yml
+- features\HELIOSTechLabs\ArkanoidOS\appx.yml
+- features\HELIOSTechLabs\ArkanoidOS\packages.yml
+- features\HELIOSTechLabs\ArkanoidOS\misc-final-config.yml
