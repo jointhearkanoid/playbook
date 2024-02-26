@@ -1,6 +1,6 @@
 ---
 title: Start
-description: Copies Revision folders/files, and configures some initial settings
+description: Copies ArkanoidOS folders, programs and files, and configures some initial settings
 privilege: TrustedInstaller
 actions:
   
@@ -13,26 +13,20 @@ actions:
   - !taskKill: {name: "backgroundTaskHost", ignoreErrors: true}
   - !taskKill: {name: "Widgets", ignoreErrors: true}
 
-  - !writeStatus: {status: "Initializing"}
-
-    # Prevent annoying notifications during deployment
+  - !writeStatus: {status: "Initializing pre-hardcore Playbook implementation tasks..."}
+  # Prevent annoying notifications during deployment
   - !registryValue:
     path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Notifications\Settings\Windows.SystemToast.SecurityAndMaintenance'
     value: 'Enabled'
     type: REG_DWORD
     data: '0'
+    # Start copying ArkanoidOS's folders, programs and files
+    - !cmd:
+    exeDir: true
+    command: 'xcopy "ArkanoidOS Program Hub" "%SystemDrive%\ArkanoidOS Program Hub" /E /H'
+    weight: 20
 
-    # Disable driver blocklist to avoid "Program Compatibility" related errors 
-  - !registryValue:
-    path: 'HKLM\SYSTEM\ControlSet001\Control\CI\Config'
-    value: 'VulnerableDriverBlocklistEnable'
-    type: REG_DWORD
-    data: '0'
-  - !cmd:
+    - !cmd:
     exeDir: true
     command: 'copy /y "hosts" "%WINDIR%\System32\drivers\etc\hosts"'
     weight: 20
-
-    # Necessary to clean DNS Cache after modifying hosts
-  - !cmd:
-    command: 'ipconfig /flushdns'
