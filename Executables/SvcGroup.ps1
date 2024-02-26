@@ -1,4 +1,5 @@
 # Forked from Revision Playbook official GitHub's repo (https://github.com/meetrevision/playbook)
+# Go check them out at https://revi.cc/
 # Alternative way to group services without breaking services like XboxGipSvc
 # By default Windows groups following services even SVC Split is enabled: BFE, mpssvc, OneSyncSvc, PimIndexMaintenanceSvc, PlugPlay, RasMan, RemoteAccess, UnistoreSvc, UserDataSvc
 # (Get-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\*" | Where-Object -Property SvcHostSplitDisable).PSChildName
