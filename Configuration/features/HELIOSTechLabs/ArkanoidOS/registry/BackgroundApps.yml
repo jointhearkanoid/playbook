@@ -1,0 +1,8 @@
+---
+title: BackgroundApps
+description: Disable background apps
+privilege: TrustedInstaller
+actions:  
+  # Disable background apps
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\BackgroundAccessApplications', value: 'GlobalUserDisabled', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Search', value: 'BackgroundAppGlobalToggle', type: REG_DWORD, data: '0'}
