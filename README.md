@@ -1,4 +1,4 @@
-# ArkanoidOS Official Playbook (ArkanoidOS Lite)
+# ArkanoidOS Official Playbook (ArkanoidOS Pro) - (Windows Enterprise LTSC and standalone Enterprise editions-based)
 [![Releases](https://img.shields.io/github/v/release/jointhearkanoid/playbook.svg)](https://github.com/jointhearkanoid/playbook/releases)
 [![License](https://img.shields.io/static/v1?label=LICENSE&message=CC%20BY-NC-SA&logo=creativecommons)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 <a href="https://ko-fi.com/arkanoidoscommunity" target="_blank"><img src="[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/K3K4J7EHM)" alt="Ko-fi" height="20px"></a>
@@ -16,12 +16,8 @@ For more detailed information, see our documentation [here](https://docs-arkanoi
 
 ## System Requirements
 
-- Windows 10 1809 `17763`
-- Windows 10 1903 `18362`
-- Windows 10 1909 `18363`
-- Windows 10 2004 `19041`
-- Windows 11 21H2 `22000`
-- Windows 11 22H2 `22631`
+- Windows 10 Enterprise LTSC 2019 `17763`
+- Windows 10 Enterprise LTSC 2021 `19044`
 
 Any other build, by now, **is not** supported by HELIOS Tech Labs.
 
@@ -49,4 +45,4 @@ See our documentation for more information:
 
 ## License
 
-ArkanoidOS Lite Playbook is licensed under [Attribution-NonCommercial-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+ArkanoidOS Pro Playbook is licensed under [Attribution-NonCommercial-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/).
