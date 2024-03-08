@@ -1,0 +1,21 @@
+---
+title: MouseFluidityPerformance
+description: Fix mouse fluidity and performance
+privilege: TrustedInstaller
+actions:
+  - !registryValue: {path: 'HKCU\Control Panel\Mouse', value: 'MouseSensitivity', type: REG_SZ, data: '10'}
+  - !registryValue: {path: 'HKCU\Control Panel\Mouse', value: 'SmoothMouseXCurve', type: REG_BINARY, data: '\
+    00,00,00,00,00,00,00,00,\
+    C0,CC,0C,00,00,00,00,00,\
+    80,99,19,00,00,00,00,00,\
+    40,66,26,00,00,00,00,00,\
+    00,33,33,00,00,00,00,00'}
+  - !registryValue: {path: 'HKCU\Control Panel\Mouse', value: 'SmoothMouseYCurve', type: REG_BINARY, data: '\
+    00,00,00,00,00,00,00,00,\
+    00,00,38,00,00,00,00,00,\
+    00,00,70,00,00,00,00,00,\
+    00,00,A8,00,00,00,00,00,\
+    00,00,E0,00,00,00,00,00'}
+  - !registryValue: {path: 'HKU\.DEFAULT\Control Panel\Mouse', value: 'MouseSpeed', type: REG_SZ, data: '0'}
+  - !registryValue: {path: 'HKU\.DEFAULT\Control Panel\Mouse', value: 'MouseThreshold1', type: REG_SZ, data: '0'}
+  - !registryValue: {path: 'HKU\.DEFAULT\Control Panel\Mouse', value: 'MouseThreshold2', type: REG_SZ, data: '0'}

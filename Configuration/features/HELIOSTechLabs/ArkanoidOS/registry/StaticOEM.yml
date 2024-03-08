@@ -1,0 +1,7 @@
+---
+title: StaticOEM
+description: Add ArkanoidOS Lite OEM Informations for version description in System Info
+privilege: TrustedInstaller
+actions:
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OEMInformation', value: 'Manufacturer', type: REG_SZ, data: 'Rayden_Berzerk409, líder de HELIOS Tech Labs'}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OEMInformation', value: 'Model', type: REG_SZ, data: 'ArkanoidOS Lite v15.0 (Playbook Edition)'}
