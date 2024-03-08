@@ -1,0 +1,10 @@
+---
+title: GamesPriority
+description: Add Windows Registry priorities for Games
+privilege: TrustedInstaller
+actions:
+    # Add Windows Registry priorities for Games
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\Tasks\Games', value: 'GPU Priority', type: REG_DWORD, data: '8'}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\Tasks\Games', value: 'Priority', type: REG_DWORD, data: '6'}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\Tasks\Games', value: 'Scheduling Category', type: REG_SZ, data: 'High'}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\Tasks\Games', value: 'SFIO Priority', type: REG_SZ, data: 'High'}
