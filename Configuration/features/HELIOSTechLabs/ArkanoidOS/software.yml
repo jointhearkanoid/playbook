@@ -4,15 +4,58 @@ description: Installs preferred softwares
 privilege: TrustedInstaller
 actions:
 
+  - !writeStatus: {status: 'Installing Chocolatey'}
+  - !powerShell:
+    command: 'Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString(''https://community.chocolatey.org/install.ps1''))'
+    weight: 50
   - !writeStatus: {status: Installing PatchMyPC...}
   - !powerShell:
     command: 'Invoke-WebRequest -Uri 'https://patchmypc.com/freeupdater/PatchMyPC.exe' -OutFile "C:\ArkanoidOS Program Hub\PROGRAMAS\PatchMyPC.exe" -UseBasicParsing -PassThru | Out-Null'
-
   - !writeStatus: {status: Adding PatchMyPC to extended context menu...}
   - !registryKey: {path: 'HKCR\directory\background\shell\ArkanoidOS Program Hub\shell\Patch My PC\', operation: add}
   - !registryValue: {path: 'HKCR\directory\background\shell\ArkanoidOS Program Hub\shell\Patch My PC\', value: 'Icon', type: REG_EXPAND_SZ, data: 'C:\ArkanoidOS Program Hub\PROGRAMAS\PatchMyPC\PatchMyPC.exe'}
   - !registryValue: {path: 'HKCR\directory\background\shell\ArkanoidOS Program Hub\shell\Patch My PC\', value: 'MUIVerb', type: REG_SZ, data: 'Patch My PC'}
   - !registryKey: {path: 'HKCR\directory\background\shell\ArkanoidOS Program Hub\shell\Patch My PC\command', operation: add}
   - !registryValue: {path: 'HKCR\directory\background\shell\ArkanoidOS Program Hub\shell\Patch My PC\command', value: '', type: REG_EXPAND_SZ, data: 'C:\ArkanoidOS Program Hub\PROGRAMAS\PatchMyPC\PatchMyPC.exe'}
+  - !writeStatus: {status: Downloading Rainmeter...}
+  - !powerShell:
+    command: 'Invoke-WebRequest -Uri 'https://github.com/rainmeter/rainmeter/releases/download/v4.5.18.3727/Rainmeter-4.5.18.exe' -OutFile "\"$env:TEMP\Rainmeter-4.5.18.exe" -UseBasicParsing -PassThru | Out-Null'
+  - !writeStatus: {status: 'Installing Rainmeter...'}
+  - !cmd: {command: 'call "%temp%\Rainmeter-4.5.18.exe" /S /LANGUAGE=ES', runas: currentUserElevated, weight: 50}
+  - !writeStatus: {status: Adding Rainmeter to extended context menu...}
+  - !registryKey: {path: 'HKCR\directory\background\shell\ArkanoidOS Program Hub\shell\Rainmeter\', operation: add}
+  - !registryValue: {path: 'HKCR\directory\background\shell\ArkanoidOS Program Hub\shell\Rainmeter\', value: 'Icon', type: REG_EXPAND_SZ, data: '%ProgramFiles%\Rainmeter\Rainmeter.exe'}
+  - !registryValue: {path: 'HKCR\directory\background\shell\ArkanoidOS Program Hub\shell\Rainmeter\', value: 'MUIVerb', type: REG_SZ, data: 'Rainmeter'}
+  - !registryKey: {path: 'HKCR\directory\background\shell\ArkanoidOS Program Hub\shell\Rainmeter\command', operation: add}
+  - !registryValue: {path: 'HKCR\directory\background\shell\ArkanoidOS Program Hub\shell\Rainmeter\command', value: '@', type: REG_EXPAND_SZ, data: '%ProgramFiles%\Rainmeter\Rainmeter.exe'}
+  - !writeStatus: {status: Downloading Lively Wallpaper...}
+  - !powerShell:
+    command: 'Invoke-WebRequest -Uri 'https://github.com/rocksdanister/lively/releases/download/v2.0.7.4/lively_setup_x86_full_v2074.exe' -OutFile "\"$env:TEMP\lively_setup_x86_full_v2074.exe" -UseBasicParsing -PassThru | Out-Null'
+  - !writeStatus: {status: 'Installing Lively Wallpaper...'}
+  - !cmd: {command: 'call "%temp%\lively_setup_x86_full_v2074.exe" /VERYSILENT', runas: currentUserElevated, weight: 50}
+  - !writeStatus: {status: Adding Lively Wallpaper to extended context menu...}
+  - !registryKey: {path: 'HKCR\directory\background\shell\ArkanoidOS Program Hub\shell\Lively Wallpaper\', operation: add}
+  - !registryValue: {path: 'HKCR\directory\background\shell\ArkanoidOS Program Hub\shell\Lively Wallpaper\', value: 'Icon', type: REG_EXPAND_SZ, data: '%LocalAppdata%\Programs\Lively Wallpaper\lively.exe'}
+  - !registryValue: {path: 'HKCR\directory\background\shell\ArkanoidOS Program Hub\shell\Lively Wallpaper\', value: 'MUIVerb', type: REG_SZ, data: 'Lively Wallpaper'}
+  - !registryKey: {path: 'HKCR\directory\background\shell\ArkanoidOS Program Hub\shell\Lively Wallpaper\command', operation: add}
+  - !registryValue: {path: 'HKCR\directory\background\shell\ArkanoidOS Program Hub\shell\Lively Wallpaper\command', value: '@', type: REG_EXPAND_SZ, data: '%LocalAppdata%\Programs\Lively Wallpaper\lively.exe'}
+  - !writeStatus: {status: Downloading Winaero Tweaker...}
+  - !powerShell:
+    command: 'Invoke-WebRequest -Uri 'https://winaerotweaker.com/download/winaerotweaker.zip' -OutFile "\"$env:TEMP\winaerotweaker.zip" -UseBasicParsing -PassThru | Out-Null'
+  - !writeStatus: {status: 'Unzipping Winaero Tweaker...'}
+  - !cmd:
+    exeDir: true
+    exe: "7-Zip\7z.exe"
+    args: "e %Temp%\winaerotweaker.zip -o 'C:\ArkanoidOS Program Hub\PROGRAMAS\winaerotweaker'"
+    weight: 20
+  - !writeStatus: {status: 'Installing Winaero Tweaker...'}
+  - !cmd: {command: 'call "C:\ArkanoidOS Program Hub\PROGRAMAS\winaerotweaker\SilentSetup.cmd"', runas: currentUserElevated, weight: 50}
+  - !writeStatus: {status: Adding Winaero Tweaker to extended context menu...}
+  - !registryKey: {path: 'HKCR\directory\background\shell\ArkanoidOS Program Hub\shell\Winaero Tweaker\', operation: add}
+  - !registryValue: {path: 'HKCR\directory\background\shell\ArkanoidOS Program Hub\shell\Winaero Tweaker\', value: 'Icon', type: REG_EXPAND_SZ, data: '%ProgramFiles%\Winaero Tweaker\WinaeroTweaker.exe'}
+  - !registryValue: {path: 'HKCR\directory\background\shell\ArkanoidOS Program Hub\shell\Winaero Tweaker\', value: 'MUIVerb', type: REG_SZ, data: 'Winaero Tweaker'}
+  - !registryKey: {path: 'HKCR\directory\background\shell\ArkanoidOS Program Hub\shell\Winaero Tweaker\command', operation: add}
+  - !registryValue: {path: 'HKCR\directory\background\shell\ArkanoidOS Program Hub\shell\Winaero Tweaker\command', value: '@', type: REG_EXPAND_SZ, data: '%ProgramFiles%\Winaero Tweaker\WinaeroTweaker.exe'}
+  
 
   
