@@ -166,7 +166,6 @@ actions:
    - !systemPackage: {name: 'Microsoft-Windows-Holographic-Desktop-Analog-Package', arch: amd64, language: 'neutral'}
    - !systemPackage: {name: 'Microsoft-Windows-WinOcr', arch: amd64, language: 'neutral'}
    - !systemPackage: {name: 'Server-Help-Package.ClientEnterprise', arch: amd64, language: 'neutral'}
-   - !systemPackage: {name: 'Microsoft-Hyper-V-ClientEdition', arch: amd64, language: 'neutral'}
    - !systemPackage: {name: 'Microsoft-Windows-WindowsMediaPlayer-Troubleshooters', arch: amd64, language: 'neutral'}
    - !systemPackage: {name: 'Microsoft-Windows-DirectPlay-OC', arch: amd64, language: 'neutral'}
    - !systemPackage: {name: 'Microsoft-OneCore-ApplicationModel-Sync-Desktop-FOD-Package', arch: wow64, language: 'neutral'}
@@ -189,7 +188,5 @@ actions:
    - !systemPackage: {name: 'Microsoft-Windows-TS-OptionalComponents', arch: amd64, language: 'neutral'}
    - !systemPackage: {name: 'Microsoft-Windows-TerminalServices-AppServer-Client', arch: amd64, language: 'neutral'}
    - !systemPackage: {name: 'RemoteDesktopServices-Base', arch: amd64, language: 'neutral'}
-   - !systemPackage: {name: 'Microsoft-Windows-HyperV-OptionalFeature-VirtualMachinePlatform-Client-Disabled', arch: amd64, language: 'neutral'}
-   - !systemPackage: {name: 'Microsoft-Windows-HyperV-OptionalFeature-HypervisorPlatform-Disabled', arch: amd64, language: 'neutral'}
    - !systemPackage: {name: 'Containers-OptionalFeature-DisposableClientVM', arch: amd64, language: 'neutral'}
    - !systemPackage: {name: 'Microsoft-Windows-Lxss-Optional', arch: amd64, language: 'neutral'}
