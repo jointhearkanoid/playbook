@@ -1,7 +1,7 @@
-# ArkanoidOS Official Playbook (ArkanoidOS Lite)
+# ArkanoidOS Official Playbook (ArkanoidOS + (Plus))
 [![Releases](https://img.shields.io/github/v/release/jointhearkanoid/playbook.svg)](https://github.com/jointhearkanoid/playbook/releases)
 [![License](https://img.shields.io/static/v1?label=LICENSE&message=CC%20BY-NC-SA&logo=creativecommons)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
-<a href="https://ko-fi.com/arkanoidoscommunity" target="_blank"><img src="[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/K3K4J7EHM)" alt="Ko-fi" height="20px"></a>
+<a href="https://ko-fi.com/arkanoidoscommunity" target="_blank"><img src="[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/K3K4J7EHM)"></a>
 <br>
 
 ArkanoidOS is a customized version of Windows, which aims to a very simple objective: being a fast and lightweight but, at the same time, highly customizable, attractive, version-wide, portable, feature-rich and user-oriented operating system. It aspires to provide an user-oriented and modular-like experience for all kinds of PCs, from extreme low-end PCs to the most highest end PCs. Now compatible with [AME Wizard](https://ameliorated.io).
