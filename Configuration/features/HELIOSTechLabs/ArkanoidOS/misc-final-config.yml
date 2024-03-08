@@ -1,0 +1,46 @@
+#Forked from Revision Project's Official Playbook GitHub Repo https://github.com/meetrevision/playbook
+#Go check them out at https://revi.cc/
+---
+title: Configuration
+description: Applies some misc ArkanoidOS configurations
+privilege: TrustedInstaller
+actions:
+
+  - !writeStatus: {status: "Wrapping up process and finalizing implementation..."}
+  - !run:
+    exeDir: true
+    exe: "PowerShell"
+    args: '-NoP -ExecutionPolicy Bypass -File Cleaner.ps1'
+    weight: 150
+
+  - !registryValue: {path: 'HKCU\System\GameConfigStore', value: 'GameDVR_FSEBehaviorMode', type: REG_DWORD, data: '0', weight: 70}
+  - !registryValue: {path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\BackgroundAccessApplications', value: 'GlobalUserDisabled', type: REG_DWORD, data: '1', weight: 60}
+
+   # OneDrive workaround
+  - !registryValue: {path: 'HKLM\Software\Policies\Microsoft\Windows\OneDrive', value: 'DisableFileSyncNGSC', operation: delete}
+
+  - !run:
+    exeDir: true
+    exe: "PowerShell"
+    args: '-NoP -ExecutionPolicy Bypass -File SvcGroup.ps1'
+    weight: 50
+
+  - !run: {exeDir: true, exe: "Finalize-Fix-Windows-cannot-find-MINSUDO.cmd", weight: 200}
+
+  - !run:
+    exeDir: true
+    exe: "FILEASSOC.cmd"
+    option: "configure-lpv"
+    weight: 150
+
+    # Necessary to refresh start menu entries etc.
+  - !appx: {operation: clearCache, name: '*Client.CBS*'}
+  - !appx: {operation: clearCache, name: '*StartMenuExperienceHost*'}
+  - !appx: {operation: clearCache, name: '*Windows.Search*'}
+  - !appx: {operation: clearCache, name: '*TCUI*'}
+    # Workaround for KGL versions to match
+  - !appx: {operation: clearCache, name: '*XboxGameCallableUI*'}
+  - !appx: {operation: clearCache, name: '*XboxGameOverlay*'}
+  - !appx: {operation: clearCache, name: '*XboxGamingOverlay*'}
+  - !appx: {operation: clearCache, name: '*XboxIdentityProvider*'}
+  - !appx: {operation: clearCache, name: '*XboxSpeechToTextOverlay*'}

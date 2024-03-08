@@ -1,0 +1,28 @@
+---
+title: Registry
+description: ArkanoidOS registry configuration
+privilege: TrustedInstaller
+actions: 
+  - !writeStatus: {status: "Tweaking registry and building ArkanoidOS Extended Context Menu..."}
+features:
+  - features\HELIOSTechLabs\ArkanoidOS\registry\Synchronization.yml
+  - features\HELIOSTechLabs\ArkanoidOS\registry\Telemetry.yml
+  - features\HELIOSTechLabs\ArkanoidOS\registry\GamesPriority.yml
+  - features\HELIOSTechLabs\ArkanoidOS\registry\Bloatware.yml
+  - features\HELIOSTechLabs\ArkanoidOS\registry\BackgroundApps.yml
+  - features\HELIOSTechLabs\ArkanoidOS\registry\FullscreenOpt.yml
+  - features\HELIOSTechLabs\ArkanoidOS\registry\PowerThrottling.yml
+  - features\HELIOSTechLabs\ArkanoidOS\registry\KillANRT.yml
+  - features\HELIOSTechLabs\ArkanoidOS\registry\GameTweaks.yml
+  - features\HELIOSTechLabs\ArkanoidOS\registry\Internet.yml
+  - features\HELIOSTechLabs\ArkanoidOS\registry\MouseFluidityPerformance.yml
+  - features\HELIOSTechLabs\ArkanoidOS\registry\TurnOffLocation.yml
+  - features\HELIOSTechLabs\ArkanoidOS\registry\Edit-ArkanoidOS-OEM-Version-Info.yml
+  - features\HELIOSTechLabs\ArkanoidOS\registry\Bypass-Windows11-Requirements.yml
+  - features\HELIOSTechLabs\ArkanoidOS\registry\Deprovisioned-UWP-Apps.yml
+  - features\HELIOSTechLabs\ArkanoidOS\registry\IE.yml
+  - features\HELIOSTechLabs\ArkanoidOS\registry\Kernel.yml
+  - features\HELIOSTechLabs\ArkanoidOS\registry\OOBE.yml
+  - features\HELIOSTechLabs\ArkanoidOS\registry\Privacy.yml
+  - features\HELIOSTechLabs\ArkanoidOS\registry\StaticOEM.yml
+  - features\HELIOSTechLabs\ArkanoidOS\registry\ArkOSExtendedMenu.yml
