@@ -1,6 +1,5 @@
 title: APPX Removal
 actions:
-  - !appx: {name: '*Microsoft.ZuneMusic*', type: family}
   - !appx: {name: '*Microsoft.ZuneVideo*', type: family}
   - !appx: {name: '*OneNote*', type: family}
   - !appx: {name: '*SkypeApp*', type: family}
@@ -13,8 +12,6 @@ actions:
   - !appx: {name: '*Microsoft.WindowsAlarms*', type: family}
   - !appx: {name: '*Microsoft.ScreenSketch*', type: family}
   - !appx: {name: '*Microsoft.Paint*', type: family}
-  - !appx: {name: '*Microsoft.StorePurchaseApp*', type: family}
-  - !appx: {name: '*Microsoft.WindowsStore*', type: family}
   - !appx: {name: '*Microsoft.WindowsTerminal*', type: family}
   - !appx: {name: '*Microsoft.WindowsTerminalPreview*', type: family}
   - !appx: {name: '*MicrosoftCorporationII.WindowsSubsystemForLinux*', type: family}
@@ -37,9 +34,7 @@ actions:
   - !appx: {name: '*Microsoft.BingFoodAndDrink*', type: family}
   - !appx: {name: '*Microsoft.BingHealthAndFitness*', type: family}
   - !appx: {name: '*Microsoft.BingTravel*', type: family}
-  - !appx: {name: '*Microsoft.GamingApp*', type: family}
   - !appx: {name: '*MinecraftUWP*', type: family}
-  - !appx: {name: '*Microsoft.GamingServices*', type: family}
   - !appx: {name: '*GetHelp*', type: family}
   - !appx: {name: '*NetworkSpeedTest*', type: family}
   - !appx: {name: '*News*', type: family}
@@ -50,13 +45,7 @@ actions:
   - !appx: {name: '*Wallet*', type: family}
   - !appx: {name: '*Whiteboard*', type: family}
   - !appx: {name: '*WindowsFeedbackHub*', type: family}
-  - !appx: {name: '*Microsoft.XboxApp*', type: family}
-  - !appx: {name: '*Microsoft.Xbox.TCUI*', type: family}
-  - !appx: {name: '*Microsoft.XboxGameOverlay*', type: family}
-  - !appx: {name: '*XboxGameCallableUI*', type: family}
-  - !appx: {name: '*XboxSpeechToTextOverlay*', type: family}
   - !appx: {name: '*MixedReality.Portal*', type: family}
-  - !appx: {name: '*Microsoft.XboxIdentityProvider*', type: family}
   - !appx: {name: '*YourPhone*', type: family}
   - !appx: {name: '*EclipseManager*', type: family}
   - !appx: {name: '*ActiproSoftwareLLC*', type: family}
