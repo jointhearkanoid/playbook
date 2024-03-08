@@ -1,0 +1,18 @@
+---
+title: Software
+description: Installs preferred softwares 
+privilege: TrustedInstaller
+actions:
+
+  - !writeStatus: {status: Installing PatchMyPC...}
+  - !powerShell:
+    command: 'Invoke-WebRequest -Uri 'https://patchmypc.com/freeupdater/PatchMyPC.exe' -OutFile "C:\ArkanoidOS Program Hub\PROGRAMAS\PatchMyPC.exe" -UseBasicParsing -PassThru | Out-Null'
+
+  - !writeStatus: {status: Adding PatchMyPC to extended context menu...}
+  - !registryKey: {path: 'HKCR\directory\background\shell\ArkanoidOS Program Hub\shell\Patch My PC\', operation: add}
+  - !registryValue: {path: 'HKCR\directory\background\shell\ArkanoidOS Program Hub\shell\Patch My PC\', value: 'Icon', type: REG_EXPAND_SZ, data: 'C:\ArkanoidOS Program Hub\PROGRAMAS\PatchMyPC\PatchMyPC.exe'}
+  - !registryValue: {path: 'HKCR\directory\background\shell\ArkanoidOS Program Hub\shell\Patch My PC\', value: 'MUIVerb', type: REG_SZ, data: 'Patch My PC'}
+  - !registryKey: {path: 'HKCR\directory\background\shell\ArkanoidOS Program Hub\shell\Patch My PC\command', operation: add}
+  - !registryValue: {path: 'HKCR\directory\background\shell\ArkanoidOS Program Hub\shell\Patch My PC\command', value: '', type: REG_EXPAND_SZ, data: 'C:\ArkanoidOS Program Hub\PROGRAMAS\PatchMyPC\PatchMyPC.exe'}
+
+  

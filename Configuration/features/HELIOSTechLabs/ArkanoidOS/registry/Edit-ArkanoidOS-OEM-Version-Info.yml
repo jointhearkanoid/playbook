@@ -1,0 +1,18 @@
+---
+title: Edit-ArkanoidOS-OEM-Version-Info
+description: Edits ArkanoidOS OEM Version info strings to correctly show ArkanoidOS edition, Windows-based version and Playbook version implemented
+privilege: TrustedInstaller
+actions:
+
+  
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OEMInformation', value: 'Model', type: REG_SZ, data: 'ArkanoidOS v15.0'}
+  # - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion', value: 'RegisteredOrganisation', type: REG_SZ, data: 'ReviOS 23.04'}
+
+  # === Causes Network Sharing/Computer Name issues
+  # - !registryValue: {path: 'HKLM\SYSTEM\ControlSet001\Control\ComputerName\ComputerName', value: 'ComputerName', type: REG_SZ, data: 'Revision-PC'}
+  # - !registryValue: {path: 'HKLM\SYSTEM\ControlSet001\Control\ComputerName\ActiveComputerName', value: 'ComputerName', type: REG_SZ, data: 'Revision-PC'}
+    # ===================
+    # === DON'T TOUCH ===
+    # ===================
+    # === Edition info: UnifyOS, AmendOS, ReviOS etc.
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion', value: 'EditionSubVersion', type: REG_SZ, data: 'ArkanoidOS'}

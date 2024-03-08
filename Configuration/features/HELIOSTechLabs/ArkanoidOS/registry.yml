@@ -1,0 +1,227 @@
+title: Registry Edits
+actions:
+    # Disable Synchronization
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\SettingSync', value: 'SyncPolicy', type:  REG_DWORD, data: '5'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\SettingSync\Groups\Personalization', value: 'Enabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\SettingSync\Groups\BrowserSettings', value: 'Enabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\SettingSync\Groups\Credentials', value: 'Enabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\SettingSync\Groups\Accessibility', value: 'Enabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\SettingSync\Groups\Windows', value: 'Enabled', type: REG_DWORD, data: '0'}
+
+    # Disable Telemetry tasks & services
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack', value: 'ShowedToastAtLevel', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection', value: 'AllowTelemetry', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection', value: 'AllowTelemetry', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection', value: 'AllowDeviceNameInTelemetry', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Policies\DataCollection', value: 'AllowTelemetry', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Privacy', value: 'TailoredExperiencesWithDiagnosticDataEnabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\EventTranscriptKey', value: 'EnableEventTranscript', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Siuf\Rules', value: 'NumberOfSIUFInPeriod', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Siuf\Rules', value: 'PeriodInNanoSeconds', type: '-'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\AdvertisingInfo', value: 'Enabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\Control Panel\International\User Profile', value: 'HttpAcceptLanguageOptOut', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced', value: 'Start_TrackProgs', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Speech_OneCore\Settings\OnlineSpeechPrivacy', value: 'HasAccepted', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Personalization\Settings', value: 'AcceptedPrivacyPolicy', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\InputPersonalization', value: 'RestrictImplicitInkCollection', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\InputPersonalization', value: 'RestrictImplicitTextCollection', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\InputPersonalization\TrainedDataStore', value: 'HarvestContacts', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\System', value: 'PublishUserActivities', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\System', value: 'UploadUserActivities', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\userNotificationListener', value: 'Value', type: REG_SZ, data: 'Deny'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\location', value: 'Value', type: REG_SZ, data: 'Deny'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\appDiagnostics', value: 'Value', type: REG_SZ, data: 'Deny'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\userAccountInformation', value: 'Value', type: REG_SZ, data: 'Deny'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\CloudContent', value: 'ConfigureWindowsSpotlight', type: REG_DWORD, data: '2'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\CloudContent', value: 'IncludeEnterpriseSpotlight', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\CloudContent', value: 'DisableWindowsSpotlightFeatures', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\CloudContent', value: 'DisableWindowsSpotlightWindowsWelcomeExperience', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\CloudContent', value: 'DisableWindowsSpotlightOnActionCenter', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\CloudContent', value: 'DisableWindowsSpotlightOnSettings', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\CloudContent', value: 'DisableThirdPartySuggestions', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\CloudContent', value: 'DisableTailoredExperiencesWithDiagnosticData', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\CloudContent', value: 'DisableThirdPartySuggestions', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\CloudContent', value: 'DisableWindowsConsumerFeatures', type: REG_DWORD, data: '1'}
+
+    # Add Windows Registry priorities for Games
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\Tasks\Games', value: 'GPU Priority', type: REG_DWORD, data: '8'}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\Tasks\Games', value: 'Priority', type: REG_DWORD, data: '6'}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\Tasks\Games', value: 'Scheduling Category', type: REG_SZ, data: 'High'}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\Tasks\Games', value: 'SFIO Priority', type: REG_SZ, data: 'High'}
+
+    # Disable unwanted software (Bloatware)
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'ContentDeliveryAllowed', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'OemPreInstalledAppsEnabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'PreInstalledAppsEnabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'PreInstalledAppsEverEnabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'SilentInstalledAppsEnabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'SoftLandingEnabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'SubscribedContentEnabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'FeatureManagementEnabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'SystemPaneSuggestionsEnabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'RemediationRequired', type: REG_DWORD, data: '0'}
+
+    # Disable background apps
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\BackgroundAccessApplications', value: 'GlobalUserDisabled', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Search', value: 'BackgroundAppGlobalToggle', type: REG_DWORD, data: '0'}
+
+    # Disable fullscreen optmizations
+  - !registryValue: {path: 'HKCU\SYSTEM\GameConfigStore', value: 'GameDVR_Enabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SYSTEM\GameConfigStore', value: 'GameDVR_FSEBehaviorMode', type: REG_DWORD, data: '2'}
+  - !registryValue: {path: 'HKCU\SYSTEM\GameConfigStore', value: 'GameDVR_HonorUserFSEBehaviorMode', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SYSTEM\GameConfigStore', value: 'GameDVR_DXGIHonorFSEWindowsCompatible', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SYSTEM\GameConfigStore', value: 'GameDVR_EFSEFeatureFlags', type: REG_DWORD, data: '0'}
+
+    # Disable Power Throttling
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Control\Power\PowerThrottling', value: 'PowerThrottlingOff', type: REG_DWORD, data: '1'}
+
+    # Disable Game DVR
+  - !registryValue: {path: 'HKCU\SYSTEM\GameConfigStore', value: 'GameDVR_Enabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\PolicyManager\default\ApplicationManagement\AllowGameDVR', value: 'value', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\GameDVR', value: 'AllowGameDVR', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\GameDVR', value: 'AppCaptureEnabled', type: REG_DWORD, data: '0'}
+
+    # Add "Kill all not responding tasks" option to desktop's context menu
+  - !registryKey: {path: 'HKCR\DesktopBackground\Shell\KillNRTasks', operation: add}
+  - !registryValue: {path: 'HKCR\DesktopBackground\Shell\KillNRTasks', value: 'icon', type: REG_SZ, data: 'taskmgr.exe,-30651'}
+  - !registryValue: {path: 'HKCR\DesktopBackground\Shell\KillNRTasks', value: 'MUIverb', type: REG_SZ, data: 'Kill all not responding tasks'}
+  - !registryValue: {path: 'HKCR\DesktopBackground\Shell\KillNRTasks', value: 'Position', type: REG_SZ, data: 'Top'}
+  - !registryKey: {path: 'HKCR\DesktopBackground\Shell\KillNRTasks\command', operation: add}
+  - !registryValue: {path: 'HKCR\DesktopBackground\Shell\KillNRTasks\command', value: '@', type: REG_SZ, data: 'CMD.exe /C (tasklist /fi \"status eq Not Responding\" | find /v \"No tasks\" && taskkill.exe /f /fi \"status eq Not Responding\" || echo No not-responding tasks found.) & ECHO; & <NUL: set /p junk=Press any key to close this window. & PAUSE >NUL:'}
+
+    # Add Registry tweaks so popular games like Warframe, League of Legends, The Witcher 3 and GTA V runs with better FPS levels
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\Warframe.x64.exe', value: 'UseLargePages', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\League of Legends.exe', value: 'UseLargePages', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\witcher3.exe', value: 'UseLargePages', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\GTA5.exe', value: 'UseLargePages', type: REG_DWORD, data: '1'}
+
+    # Add Registry tweaks for Internet connections
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings', value: 'MaxConnectionsPerServer', type: REG_DWORD, data: 'a'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings', value: 'MaxConnectionsPer1_0Server', type: REG_DWORD, data: 'a'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\AFD\Parameters', value: 'NonBlockingSendSpecialBuffering', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'EnableConnectionRateLimiting', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'TcpTimedWaitDelay', type: REG_DWORD, data: '1e'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'SynAttackProtect', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'MTU', type: REG_DWORD, data: '5dc'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'MaxConnectionsPerServer', type: REG_DWORD, data: 'a'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'NameSrvQueryTimeout', type: REG_DWORD, data: 'bb8'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'Tcp1323Opts', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'EnablePMTUDiscovery', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'EnablePMTUBHDetect', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'TcpNumConnections', type: REG_DWORD, data: '28d2e'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'SackOpts', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'TcpMaxDupAcks', type: REG_DWORD, data: '2'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'TCPWindowSize', type: REG_DWORD, data: '4470'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'GlobalMaxTcpWindowSize', type: REG_DWORD, data: '3ebc0'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'EnableConnectionRateLimiting', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'DefaultTTL', type: REG_DWORD, data: '20'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'EnableWsd', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'QualifyingDestinationThreshold', type: REG_DWORD, data: 'ffffffff'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'EnableDeadGWDetect', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'EnableICMPRedirect', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'KeepAliveTime', type: REG_DWORD, data: '493e0'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'NoNameReleaseOnDemand', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'PerformRouterDiscovery', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'SynAttackProtect', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'DhcpNameServer', type: REG_SZ, data: ''}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'MaxConnectionsPerServer', type: REG_DWORD, data: 'a'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'MaxUserPort', type: REG_DWORD, data: 'fffe'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'TcpNumConnections', type: REG_DWORD, data: 'fffffe'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'TcpMaxDataRetransmissions', type: REG_DWORD, data: '5'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters', value: 'ServiceDllUnloadOnStop', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters', value: 'autodisconnect', type: REG_DWORD, data: 'f'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters', value: 'AutoShareWks', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters', value: 'Hidden', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters', value: 'AutoShareServer', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters', value: 'SizReqBuf', type: REG_DWORD, data: 'ffff'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters', value: 'IRPStackSize', type: REG_DWORD, data: '32'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters', value: 'Size', type: REG_DWORD, data: '3'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters', value: 'DisableBandwidthThrottling', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters', value: 'MaxCmds', type: REG_DWORD, data: '1e'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters', value: 'MaxThreads', type: REG_DWORD, data: '1e'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Control\Nsi\{eb004a03-9b1a-11d4-9123-0050047759bc}\0', value: '0200', type: REG_BINARY, data: '00,00,00,00,01,00,00,07,00,00,00,00,00,00,00,00,1e,00,00,00,00,00,\
+  00,00,00,00,00,00,02,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,ff,\
+  00,ff,00,ff,ff,00,00,00,00,00,00,00,00,ff,ff,ff,ff,00,00,00,00,00,00,00,00,\
+  ff,ff,00,00,ff,ff,ff,ff,00,00,00,00,00,00,00,00'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Control\Nsi\{eb004a03-9b1a-11d4-9123-0050047759bc}\0', value: '1700', type: REG_BINARY, data: '00,00,00,00,01,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,02,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,ff,00,ff,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  ff,00,00,00,ff,ff,ff,ff,00,00,00,00,00,00,00,00'}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\Psched', value: 'NonBestEffortLimit', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp', value: 'TcpAutotuning', type: REG_DWORD, data: '2'}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings', value: 'TcpAutotuning', type: REG_DWORD, data: '2'}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Internet Settings', value: 'TcpAutotuning', type: REG_DWORD, data: '2'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters', value: 'CacheHashTableBucketSize', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters', value: 'CacheHashTableSize', type: REG_DWORD, data: '180'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters', value: 'MaxCacheEntryTtlLimit', type: REG_DWORD, data: 'fa00'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters', value: 'MaxSOACacheEntryTtlLimit', type: REG_DWORD, data: '12'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters', value: 'NegativeCacheTime', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters', value: 'NetFailureCacheTime', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters', value: 'NegativeSOACacheTime', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters', value: 'MaximumUdpPacketSize', type: REG_DWORD, data: '1300'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\ServiceProvider', value: 'Class', type: REG_DWORD, data: '8'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\ServiceProvider', value: 'DnsPriority', type: REG_DWORD, data: '6'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\ServiceProvider', value: 'HostsPriority', type: REG_DWORD, data: '5'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\ServiceProvider', value: 'LocalPriority', type: REG_DWORD, data: '4'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\ServiceProvider', value: 'NetbtPriority', type: REG_DWORD, data: '7'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\NDIS\Parameters', value: 'MaxNumRssCpus', type: REG_DWORD, data: '4'}
+
+    # Fix mouse fluidity and performance
+  - !registryValue: {path: 'HKCU\Control Panel\Mouse', value: 'MouseSensitivity', type: REG_SZ, data: '10'}
+  - !registryValue: {path: 'HKCU\Control Panel\Mouse', value: 'SmoothMouseXCurve', type: REG_BINARY, data: '\
+    00,00,00,00,00,00,00,00,\
+    C0,CC,0C,00,00,00,00,00,\
+    80,99,19,00,00,00,00,00,\
+    40,66,26,00,00,00,00,00,\
+    00,33,33,00,00,00,00,00'}
+  - !registryValue: {path: 'HKCU\Control Panel\Mouse', value: 'SmoothMouseYCurve', type: REG_BINARY, data: '\
+    00,00,00,00,00,00,00,00,\
+    00,00,38,00,00,00,00,00,\
+    00,00,70,00,00,00,00,00,\
+    00,00,A8,00,00,00,00,00,\
+    00,00,E0,00,00,00,00,00'}
+  - !registryValue: {path: 'HKU\.DEFAULT\Control Panel\Mouse', value: 'MouseSpeed', type: REG_SZ, data: '0'}
+  - !registryValue: {path: 'HKU\.DEFAULT\Control Panel\Mouse', value: 'MouseThreshold1', type: REG_SZ, data: '0'}
+  - !registryValue: {path: 'HKU\.DEFAULT\Control Panel\Mouse', value: 'MouseThreshold2', type: REG_SZ, data: '0'}
+
+    # Turn off Location service for account and apps
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\location', value: 'Value', type: REG_SZ, data: 'Deny'}
+
+    # Build ArkanoidOS's official Extended Context Menu (through Registry)
+  - !registryKey: {path: 'HKCR\directory\background\shell\ArkanoidOS Program Hub', operation: add}
+  - !registryValue: {path: 'HKCR\directory\background\shell\ArkanoidOS Program Hub', value: 'Icon', type: REG_EXPAND_SZ, data: '"C:\ArkanoidOS Program Hub\ICONOS\ArkanoidOS Logo.ico'}
+  - !registryValue: {path: 'HKCR\directory\background\shell\ArkanoidOS Program Hub', value: 'MUIVerb', type: REG_SZ, data: 'ArkanoidOS Program Hub'}
+  - !registryKey: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)', operation: add}
+  - !registryValue: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)', value: 'Icon', type: REG_EXPAND_SZ, data: '"C:\ArkanoidOS Program Hub\ICONOS\ArkanoidOS Logo.ico'}
+  - !registryValue: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)', value: 'MUIVerb', type: REG_SZ, data: '#NaciónArkanoidOS (Redes Sociales)'}
+  - !registryKey: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\OfficialPage', operation: add}
+  - !registryKey: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\KnowledgeBase', operation: add}
+  - !registryKey: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\YTChannel', operation: add}
+  - !registryKey: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\KofiPage', operation: add}
+  - !registryKey: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\PatreonPage', operation: add}
+  - !registryKey: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\GitHub', operation: add}
+  - !registryValue: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\OfficialPage', value: 'Icon', type: REG_EXPAND_SZ, data: 'C:\ArkanoidOS Program Hub\ICONOS\ArkanoidOS Logo.ico'}
+  - !registryValue: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\OfficialPage', value: 'MUIVerb', type: REG_SZ, data: 'Página oficial de ArkanoidOS'}
+  - !registryValue: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\KnowledgeBase', value: 'Icon', type: REG_EXPAND_SZ, data: 'C:\ArkanoidOS Program Hub\ICONOS\ArkanoidOS Logo.ico'}
+  - !registryValue: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\KnowledgeBase', value: 'MUIVerb', type: REG_SZ, data: 'Base de Conocimientos Oficial (Knowledge Base)'}
+  - !registryValue: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\YTChannel', value: 'Icon', type: REG_EXPAND_SZ, data: 'C:\ArkanoidOS Program Hub\ICONOS\YouTube Logo.ico'}
+  - !registryValue: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\YTChannel', value: 'MUIVerb', type: REG_SZ, data: 'Canal de YT Oficial'}
+  - !registryValue: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\KofiPage', value: 'Icon', type: REG_EXPAND_SZ, data: 'C:\ArkanoidOS Program Hub\ICONOS\Ko-fi Logo.ico'}
+  - !registryValue: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\KofiPage', value: 'MUIVerb', type: REG_SZ, data: 'Invita a un Cafecito (Donativos)'}
+  - !registryValue: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\PatreonPage', value: 'Icon', type: REG_EXPAND_SZ, data: 'C:\ArkanoidOS Program Hub\ICONOS\Patreon Logo.ico'}
+  - !registryValue: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\PatreonPage', value: 'MUIVerb', type: REG_SZ, data: 'Conviértete en Mecenas ArkanoidOS (Página de Patreon Oficial)'}
+  - !registryValue: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\GitHub', value: 'Icon', type: REG_EXPAND_SZ, data: 'C:\ArkanoidOS Program Hub\ICONOS\GitHub Logo.ico'}
+  - !registryValue: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\GitHub', value: 'MUIVerb', type: REG_SZ, data: '¡Somos open-source! (Repositorio oficial de GitHub)'}
+  - !registryKey: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\OfficialPage\command', operation: add}
+  - !registryKey: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\KnowledgeBase\command', operation: add}
+  - !registryKey: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\YTChannel\command', operation: add}
+  - !registryKey: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\KofiPage\command', operation: add}
+  - !registryKey: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\PatreonPage\command', operation: add}
+  - !registryKey: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\GitHub\command', operation: add}
+  - !registryValue: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\OfficialPage\command', value: '', type: REG_EXPAND_SZ, data: 'C:\ArkanoidOS Program Hub\LAUNCHERS\abrir pagina oficial.cmd'}
+  - !registryValue: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\KnowledgeBase\command', value: 'Icon', type: REG_EXPAND_SZ, data: 'C:\ArkanoidOS Program Hub\LAUNCHERS\abrir base de conocimientos oficial.cmd'}
+  - !registryValue: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\YTChannel\command', value: 'Icon', type: REG_EXPAND_SZ, data: 'C:\ArkanoidOS Program Hub\LAUNCHERS\abrir canal de youtube.cmd'}
+  - !registryValue: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\KofiPage\command', value: 'Icon', type: REG_EXPAND_SZ, data: 'C:\ArkanoidOS Program Hub\LAUNCHERS\abrir ko-fi oficial.cmd'}
+  - !registryValue: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\PatreonPage\command', value: 'Icon', type: REG_EXPAND_SZ, data: 'C:\ArkanoidOS Program Hub\LAUNCHERS\abrir patreon oficial.cmd'}
+  - !registryValue: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\GitHub\command', value: 'Icon', type: REG_EXPAND_SZ, data: 'C:\ArkanoidOS Program Hub\LAUNCHERS\abrir repo de github oficial.cmd'}
+
