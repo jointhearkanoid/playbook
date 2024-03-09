@@ -1,0 +1,12 @@
+---
+title: KillANRT
+description: Add "Kill all not responding tasks" option to desktop's context menu
+privilege: TrustedInstaller
+actions:
+  # Add "Kill all not responding tasks" option to desktop's context menu
+  - !registryKey: {path: 'HKCR\DesktopBackground\Shell\KillNRTasks', operation: add}
+  - !registryValue: {path: 'HKCR\DesktopBackground\Shell\KillNRTasks', value: 'icon', type: REG_SZ, data: 'taskmgr.exe,-30651'}
+  - !registryValue: {path: 'HKCR\DesktopBackground\Shell\KillNRTasks', value: 'MUIverb', type: REG_SZ, data: 'Kill all not responding tasks'}
+  - !registryValue: {path: 'HKCR\DesktopBackground\Shell\KillNRTasks', value: 'Position', type: REG_SZ, data: 'Top'}
+  - !registryKey: {path: 'HKCR\DesktopBackground\Shell\KillNRTasks\command', operation: add}
+  - !registryValue: {path: 'HKCR\DesktopBackground\Shell\KillNRTasks\command', value: '@', type: REG_SZ, data: 'CMD.exe /C (tasklist /fi \"status eq Not Responding\" | find /v \"No tasks\" && taskkill.exe /f /fi \"status eq Not Responding\" || echo No not-responding tasks found.) & ECHO; & <NUL: set /p junk=Press any key to close this window. & PAUSE >NUL:'}

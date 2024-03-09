@@ -1,0 +1,11 @@
+---
+title: FullscreenOpt
+description: Disables Game DVR fullscreen optimizations
+privilege: TrustedInstaller
+actions:  
+  # Disable fullscreen optmizations
+  - !registryValue: {path: 'HKCU\SYSTEM\GameConfigStore', value: 'GameDVR_Enabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SYSTEM\GameConfigStore', value: 'GameDVR_FSEBehaviorMode', type: REG_DWORD, data: '2'}
+  - !registryValue: {path: 'HKCU\SYSTEM\GameConfigStore', value: 'GameDVR_HonorUserFSEBehaviorMode', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SYSTEM\GameConfigStore', value: 'GameDVR_DXGIHonorFSEWindowsCompatible', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SYSTEM\GameConfigStore', value: 'GameDVR_EFSEFeatureFlags', type: REG_DWORD, data: '0'}

@@ -1,0 +1,42 @@
+---
+title: ArkOSExtendedMenu
+description: Build ArkanoidOS's official Extended Context Menu (through Registry)
+privilege: TrustedInstaller
+actions:
+
+  - !registryKey: {path: 'HKCR\directory\background\shell\ArkanoidOS Program Hub', operation: add}
+  - !registryValue: {path: 'HKCR\directory\background\shell\ArkanoidOS Program Hub', value: 'Icon', type: REG_EXPAND_SZ, data: '"C:\ArkanoidOS Program Hub\ICONOS\ArkanoidOS Logo.ico'}
+  - !registryValue: {path: 'HKCR\directory\background\shell\ArkanoidOS Program Hub', value: 'MUIVerb', type: REG_SZ, data: 'ArkanoidOS Program Hub'}
+  - !registryKey: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)', operation: add}
+  - !registryValue: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)', value: 'Icon', type: REG_EXPAND_SZ, data: '"C:\ArkanoidOS Program Hub\ICONOS\ArkanoidOS Logo.ico'}
+  - !registryValue: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)', value: 'MUIVerb', type: REG_SZ, data: '#NaciónArkanoidOS (Redes Sociales)'}
+  - !registryKey: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\OfficialPage', operation: add}
+  - !registryKey: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\KnowledgeBase', operation: add}
+  - !registryKey: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\YTChannel', operation: add}
+  - !registryKey: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\KofiPage', operation: add}
+  - !registryKey: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\PatreonPage', operation: add}
+  - !registryKey: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\GitHub', operation: add}
+  - !registryValue: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\OfficialPage', value: 'Icon', type: REG_EXPAND_SZ, data: 'C:\ArkanoidOS Program Hub\ICONOS\ArkanoidOS Logo.ico'}
+  - !registryValue: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\OfficialPage', value: 'MUIVerb', type: REG_SZ, data: 'Página oficial de ArkanoidOS'}
+  - !registryValue: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\KnowledgeBase', value: 'Icon', type: REG_EXPAND_SZ, data: 'C:\ArkanoidOS Program Hub\ICONOS\ArkanoidOS Logo.ico'}
+  - !registryValue: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\KnowledgeBase', value: 'MUIVerb', type: REG_SZ, data: 'Base de Conocimientos Oficial (Knowledge Base)'}
+  - !registryValue: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\YTChannel', value: 'Icon', type: REG_EXPAND_SZ, data: 'C:\ArkanoidOS Program Hub\ICONOS\YouTube Logo.ico'}
+  - !registryValue: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\YTChannel', value: 'MUIVerb', type: REG_SZ, data: 'Canal de YT Oficial'}
+  - !registryValue: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\KofiPage', value: 'Icon', type: REG_EXPAND_SZ, data: 'C:\ArkanoidOS Program Hub\ICONOS\Ko-fi Logo.ico'}
+  - !registryValue: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\KofiPage', value: 'MUIVerb', type: REG_SZ, data: 'Invita a un Cafecito (Donativos)'}
+  - !registryValue: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\PatreonPage', value: 'Icon', type: REG_EXPAND_SZ, data: 'C:\ArkanoidOS Program Hub\ICONOS\Patreon Logo.ico'}
+  - !registryValue: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\PatreonPage', value: 'MUIVerb', type: REG_SZ, data: 'Conviértete en Mecenas ArkanoidOS (Página de Patreon Oficial)'}
+  - !registryValue: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\GitHub', value: 'Icon', type: REG_EXPAND_SZ, data: 'C:\ArkanoidOS Program Hub\ICONOS\GitHub Logo.ico'}
+  - !registryValue: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\GitHub', value: 'MUIVerb', type: REG_SZ, data: '¡Somos open-source! (Repositorio oficial de GitHub)'}
+  - !registryKey: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\OfficialPage\command', operation: add}
+  - !registryKey: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\KnowledgeBase\command', operation: add}
+  - !registryKey: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\YTChannel\command', operation: add}
+  - !registryKey: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\KofiPage\command', operation: add}
+  - !registryKey: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\PatreonPage\command', operation: add}
+  - !registryKey: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\GitHub\command', operation: add}
+  - !registryValue: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\OfficialPage\command', value: '', type: REG_EXPAND_SZ, data: 'C:\ArkanoidOS Program Hub\LAUNCHERS\abrir pagina oficial.cmd'}
+  - !registryValue: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\KnowledgeBase\command', value: 'Icon', type: REG_EXPAND_SZ, data: 'C:\ArkanoidOS Program Hub\LAUNCHERS\abrir base de conocimientos oficial.cmd'}
+  - !registryValue: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\YTChannel\command', value: 'Icon', type: REG_EXPAND_SZ, data: 'C:\ArkanoidOS Program Hub\LAUNCHERS\abrir canal de youtube.cmd'}
+  - !registryValue: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\KofiPage\command', value: 'Icon', type: REG_EXPAND_SZ, data: 'C:\ArkanoidOS Program Hub\LAUNCHERS\abrir ko-fi oficial.cmd'}
+  - !registryValue: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\PatreonPage\command', value: 'Icon', type: REG_EXPAND_SZ, data: 'C:\ArkanoidOS Program Hub\LAUNCHERS\abrir patreon oficial.cmd'}
+  - !registryValue: {path: 'HKCR\directory\background\shell\#NaciónArkanoidOS (Redes Sociales)\shell\GitHub\command', value: 'Icon', type: REG_EXPAND_SZ, data: 'C:\ArkanoidOS Program Hub\LAUNCHERS\abrir repo de github oficial.cmd'}

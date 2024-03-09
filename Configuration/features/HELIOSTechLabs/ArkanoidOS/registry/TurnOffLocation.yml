@@ -1,0 +1,6 @@
+---
+title: TurnOffLocation
+description: Turn off Location service for account and apps
+privilege: TrustedInstaller
+actions:
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\location', value: 'Value', type: REG_SZ, data: 'Deny'}

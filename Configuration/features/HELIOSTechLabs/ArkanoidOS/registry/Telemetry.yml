@@ -1,0 +1,39 @@
+---
+title: Telemetry
+description: Disables Telemetry tasks and services
+privilege: TrustedInstaller
+actions:
+  # Disable Telemetry tasks & services
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack', value: 'ShowedToastAtLevel', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection', value: 'AllowTelemetry', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection', value: 'AllowTelemetry', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection', value: 'AllowDeviceNameInTelemetry', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Policies\DataCollection', value: 'AllowTelemetry', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Privacy', value: 'TailoredExperiencesWithDiagnosticDataEnabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\EventTranscriptKey', value: 'EnableEventTranscript', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Siuf\Rules', value: 'NumberOfSIUFInPeriod', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Siuf\Rules', value: 'PeriodInNanoSeconds', type: '-'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\AdvertisingInfo', value: 'Enabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\Control Panel\International\User Profile', value: 'HttpAcceptLanguageOptOut', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced', value: 'Start_TrackProgs', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Speech_OneCore\Settings\OnlineSpeechPrivacy', value: 'HasAccepted', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Personalization\Settings', value: 'AcceptedPrivacyPolicy', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\InputPersonalization', value: 'RestrictImplicitInkCollection', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\InputPersonalization', value: 'RestrictImplicitTextCollection', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\InputPersonalization\TrainedDataStore', value: 'HarvestContacts', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\System', value: 'PublishUserActivities', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\System', value: 'UploadUserActivities', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\userNotificationListener', value: 'Value', type: REG_SZ, data: 'Deny'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\location', value: 'Value', type: REG_SZ, data: 'Deny'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\appDiagnostics', value: 'Value', type: REG_SZ, data: 'Deny'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\userAccountInformation', value: 'Value', type: REG_SZ, data: 'Deny'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\CloudContent', value: 'ConfigureWindowsSpotlight', type: REG_DWORD, data: '2'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\CloudContent', value: 'IncludeEnterpriseSpotlight', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\CloudContent', value: 'DisableWindowsSpotlightFeatures', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\CloudContent', value: 'DisableWindowsSpotlightWindowsWelcomeExperience', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\CloudContent', value: 'DisableWindowsSpotlightOnActionCenter', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\CloudContent', value: 'DisableWindowsSpotlightOnSettings', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\CloudContent', value: 'DisableThirdPartySuggestions', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\CloudContent', value: 'DisableTailoredExperiencesWithDiagnosticData', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\CloudContent', value: 'DisableThirdPartySuggestions', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\CloudContent', value: 'DisableWindowsConsumerFeatures', type: REG_DWORD, data: '1'}
