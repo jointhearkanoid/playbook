@@ -25,4 +25,5 @@ features:
   - features\HELIOSTechLabs\ArkanoidOS\registry\OOBE.yml
   - features\HELIOSTechLabs\ArkanoidOS\registry\Privacy.yml
   - features\HELIOSTechLabs\ArkanoidOS\registry\StaticOEM.yml
+  - features\HELIOSTechLabs\ArkanoidOS\registry\Set-Windows-Target-Version-for-Windows-Update.yml
   - features\HELIOSTechLabs\ArkanoidOS\registry\ArkOSExtendedMenu.yml
