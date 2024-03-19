@@ -1,0 +1,10 @@
+---
+title:  Set-Windows-Target-Version-for-Windows-Update
+description: Sets Windows target version as a patch for Windows Registry, so Windows Update does not download and auto install (neither force update) feature updates to Windows 10 22H2, in ArkanoidOS versions from Windows 10 1809 to 21H2
+privilege: TrustedInstaller
+actions:
+
+  - !cmd:
+  exeDir: true
+  command: 'Set-Windows-Target-Version-for-Windows-Update.bat"
+  weight: 200
