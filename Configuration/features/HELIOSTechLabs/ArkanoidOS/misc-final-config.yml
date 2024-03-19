@@ -33,6 +33,12 @@ actions:
     option: "configure-lpv"
     weight: 150
 
+  - !run:
+    exeDir: true
+    exe: "Wallpaper.cmd"
+    option: "configure-wallpaper"
+    weight: 90
+
     # Necessary to refresh start menu entries etc.
   - !appx: {operation: clearCache, name: '*Client.CBS*'}
   - !appx: {operation: clearCache, name: '*StartMenuExperienceHost*'}
