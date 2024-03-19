@@ -1,0 +1,9 @@
+---
+title: GameTweaks
+description: Add Registry tweaks so popular games like Warframe, League of Legends, The Witcher 3 and GTA V runs with better FPS levels
+privilege: TrustedInstaller
+actions:
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\Warframe.x64.exe', value: 'UseLargePages', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\League of Legends.exe', value: 'UseLargePages', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\witcher3.exe', value: 'UseLargePages', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\GTA5.exe', value: 'UseLargePages', type: REG_DWORD, data: '1'}

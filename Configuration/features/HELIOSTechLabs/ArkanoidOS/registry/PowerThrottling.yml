@@ -1,0 +1,8 @@
+---
+title: PowerThrottling
+description: Disables Power Throttling
+privilege: TrustedInstaller
+actions:
+
+  # Disable Power Throttling
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Control\Power\PowerThrottling', value: 'PowerThrottlingOff', type: REG_DWORD, data: '1'}
