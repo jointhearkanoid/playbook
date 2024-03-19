@@ -4,6 +4,7 @@ description: Sets Windows target version as a patch for Windows Registry, so Win
 privilege: TrustedInstaller
 actions:
 
+  - !writeStatus: {status: "Patching Registry to prevent forced auto update to Win10 22H2..."}
   - !cmd:
   exeDir: true
   command: 'Set-Windows-Target-Version-for-Windows-Update.bat"
