@@ -20,13 +20,17 @@ actions:
     value: 'Enabled'
     type: REG_DWORD
     data: '0'
-    # Start copying ArkanoidOS's folders, programs and files
-    - !cmd:
-    exeDir: true
-    command: 'xcopy "ArkanoidOS Program Hub" "%SystemDrive%\ArkanoidOS Program Hub" /E /H'
-    weight: 20
+      # Start copying ArkanoidOS's folders, programs and files
+  - !cmd:
+  exeDir: true
+  command: 'robocopy 'ArkanoidOS Program Hub' '%SystemDrive%' /mir'
+  weight: 20
+  
+  - !cmd:
+  exeDir: true
+  command: 'copy /y 'hosts' '%WINDIR%\System32\drivers\etc\hosts''
+  weight: 20
 
-    - !cmd:
-    exeDir: true
-    command: 'copy /y "hosts" "%WINDIR%\System32\drivers\etc\hosts"'
-    weight: 20
+  # Necessary to clean DNS Cache after modifying hosts
+  - !cmd:
+    command: 'ipconfig /flushdns'
