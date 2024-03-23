@@ -1,0 +1,16 @@
+Windows Registry Editor Version 5.00  
+ 
+; Registry File By Links
+ 
+ 
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager]
+"ContentDeliveryAllowed"=dword:00000000
+"OemPreInstalledAppsEnabled"=dword:00000000
+"PreInstalledAppsEnabled"=dword:00000000
+"PreInstalledAppsEverEnabled"=dword:00000000
+"SilentInstalledAppsEnabled"=dword:00000000
+"SoftLandingEnabled"=dword:00000000
+"SubscribedContentEnabled"=dword:00000000
+"FeatureManagementEnabled"=dword:00000000
+"SystemPaneSuggestionsEnabled"=dword:00000000
+"RemediationRequired"=dword:00000000
