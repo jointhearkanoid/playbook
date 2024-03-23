@@ -4,9 +4,8 @@ description: Disables Synchronization tasks
 privilege: TrustedInstaller
 actions:
     # Disable Synchronization
-    - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\SettingSync', value: 'SyncPolicy', type:  REG_DWORD, data: '5'}
-    - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\SettingSync\Groups\Personalization', value: 'Enabled', type: REG_DWORD, data: '0'}
-    - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\SettingSync\Groups\BrowserSettings', value: 'Enabled', type: REG_DWORD, data: '0'}
-    - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\SettingSync\Groups\Credentials', value: 'Enabled', type: REG_DWORD, data: '0'}
-    - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\SettingSync\Groups\Accessibility', value: 'Enabled', type: REG_DWORD, data: '0'}
-    - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\SettingSync\Groups\Windows', value: 'Enabled', type: REG_DWORD, data: '0'}
+    - !writeStatus: {status: "Disabling Synchronization tasks..."}
+    - !run:
+    exeDir: true
+    exe: "Synchronization.bat"
+    weight: 30
