@@ -6,7 +6,7 @@ actions:
 
   - !writeStatus: {status: Installing PatchMyPC...}
   - !powerShell:
-    command: 'Invoke-WebRequest -Uri 'https://patchmypc.com/freeupdater/PatchMyPC.exe' -OutFile "C:\ArkanoidOS Program Hub\PROGRAMAS\PatchMyPC.exe" -UseBasicParsing -PassThru | Out-Null'
+  command: 'Invoke-WebRequest -Uri ''https://patchmypc.com/freeupdater/PatchMyPC.exe'' -OutFile "C:\\ArkanoidOS Program Hub\\PROGRAMAS\\PatchMyPC.exe" -UseBasicParsing -PassThru | Out-Null'
 
   - !writeStatus: {status: Adding PatchMyPC to extended context menu...}
   - !registryKey: {path: 'HKCR\directory\background\shell\ArkanoidOS Program Hub\shell\Patch My PC\', operation: add}
