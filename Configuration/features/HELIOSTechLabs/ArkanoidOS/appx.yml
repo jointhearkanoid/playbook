@@ -1,5 +1,10 @@
+---
 title: APPX Removal
+description: Remove unnecessary Metro Apps UWP from Windows 10/11
+privilege: TrustedInstaller
 actions:
+
+  - !writeStatus: {status: "Removing Metro UWP Apps..."}
   - !appx: {name: '*Microsoft.ZuneMusic*', type: family}
   - !appx: {name: '*Microsoft.ZuneVideo*', type: family}
   - !appx: {name: '*OneNote*', type: family}
@@ -92,7 +97,7 @@ actions:
   - !appx: {name: '*Microsoft.549981C3F5F10*', type: family}
   - !appx: {name: '*Clipchamp.Clipchamp*', type: family}
 
-# Necessary to refresh start menu entries etc.
+  # Necessary to refresh start menu entries etc.
   - !appx: {name: '*Client.CBS*', operation: clearCache}
   - !appx: {name: '*StartMenuExperienceHost*', operation: clearCache}
   - !appx: {name: '*Windows.Search*', operation: clearCache}
