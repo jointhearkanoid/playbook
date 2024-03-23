@@ -3,72 +3,8 @@ title: Internet
 description: Add Registry tweaks for Internet connections
 privilege: TrustedInstaller
 actions:
-  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings', value: 'MaxConnectionsPerServer', type: REG_DWORD, data: 'a'}
-  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings', value: 'MaxConnectionsPer1_0Server', type: REG_DWORD, data: 'a'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\AFD\Parameters', value: 'NonBlockingSendSpecialBuffering', type: REG_DWORD, data: '1'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'EnableConnectionRateLimiting', type: REG_DWORD, data: '0'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'TcpTimedWaitDelay', type: REG_DWORD, data: '1e'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'SynAttackProtect', type: REG_DWORD, data: '1'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'MTU', type: REG_DWORD, data: '5dc'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'MaxConnectionsPerServer', type: REG_DWORD, data: 'a'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'NameSrvQueryTimeout', type: REG_DWORD, data: 'bb8'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'Tcp1323Opts', type: REG_DWORD, data: '1'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'EnablePMTUDiscovery', type: REG_DWORD, data: '1'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'EnablePMTUBHDetect', type: REG_DWORD, data: '0'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'TcpNumConnections', type: REG_DWORD, data: '28d2e'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'SackOpts', type: REG_DWORD, data: '1'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'TcpMaxDupAcks', type: REG_DWORD, data: '2'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'TCPWindowSize', type: REG_DWORD, data: '4470'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'GlobalMaxTcpWindowSize', type: REG_DWORD, data: '3ebc0'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'EnableConnectionRateLimiting', type: REG_DWORD, data: '1'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'DefaultTTL', type: REG_DWORD, data: '20'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'EnableWsd', type: REG_DWORD, data: '0'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'QualifyingDestinationThreshold', type: REG_DWORD, data: 'ffffffff'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'EnableDeadGWDetect', type: REG_DWORD, data: '0'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'EnableICMPRedirect', type: REG_DWORD, data: '0'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'KeepAliveTime', type: REG_DWORD, data: '493e0'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'NoNameReleaseOnDemand', type: REG_DWORD, data: '1'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'PerformRouterDiscovery', type: REG_DWORD, data: '0'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'SynAttackProtect', type: REG_DWORD, data: '1'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'DhcpNameServer', type: REG_SZ, data: ''}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'MaxConnectionsPerServer', type: REG_DWORD, data: 'a'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'MaxUserPort', type: REG_DWORD, data: 'fffe'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'TcpNumConnections', type: REG_DWORD, data: 'fffffe'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', value: 'TcpMaxDataRetransmissions', type: REG_DWORD, data: '5'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters', value: 'ServiceDllUnloadOnStop', type: REG_DWORD, data: '1'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters', value: 'autodisconnect', type: REG_DWORD, data: 'f'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters', value: 'AutoShareWks', type: REG_DWORD, data: '0'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters', value: 'Hidden', type: REG_DWORD, data: '1'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters', value: 'AutoShareServer', type: REG_DWORD, data: '0'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters', value: 'SizReqBuf', type: REG_DWORD, data: 'ffff'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters', value: 'IRPStackSize', type: REG_DWORD, data: '32'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters', value: 'Size', type: REG_DWORD, data: '3'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters', value: 'DisableBandwidthThrottling', type: REG_DWORD, data: '1'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters', value: 'MaxCmds', type: REG_DWORD, data: '1e'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters', value: 'MaxThreads', type: REG_DWORD, data: '1e'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Control\Nsi\{eb004a03-9b1a-11d4-9123-0050047759bc}\0', value: '0200', type: REG_BINARY, data: '00,00,00,00,01,00,00,07,00,00,00,00,00,00,00,00,1e,00,00,00,00,00,\
-  00,00,00,00,00,00,02,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,ff,\
-  00,ff,00,ff,ff,00,00,00,00,00,00,00,00,ff,ff,ff,ff,00,00,00,00,00,00,00,00,\
-  ff,ff,00,00,ff,ff,ff,ff,00,00,00,00,00,00,00,00'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Control\Nsi\{eb004a03-9b1a-11d4-9123-0050047759bc}\0', value: '1700', type: REG_BINARY, data: '00,00,00,00,01,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
-  00,00,00,00,00,00,02,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
-  00,ff,00,ff,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
-  ff,00,00,00,ff,ff,ff,ff,00,00,00,00,00,00,00,00'}
-  - !registryValue: {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\Psched', value: 'NonBestEffortLimit', type: REG_DWORD, data: '0'}
-  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp', value: 'TcpAutotuning', type: REG_DWORD, data: '2'}
-  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings', value: 'TcpAutotuning', type: REG_DWORD, data: '2'}
-  - !registryValue: {path: 'HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Internet Settings', value: 'TcpAutotuning', type: REG_DWORD, data: '2'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters', value: 'CacheHashTableBucketSize', type: REG_DWORD, data: '1'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters', value: 'CacheHashTableSize', type: REG_DWORD, data: '180'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters', value: 'MaxCacheEntryTtlLimit', type: REG_DWORD, data: 'fa00'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters', value: 'MaxSOACacheEntryTtlLimit', type: REG_DWORD, data: '12'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters', value: 'NegativeCacheTime', type: REG_DWORD, data: '0'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters', value: 'NetFailureCacheTime', type: REG_DWORD, data: '0'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters', value: 'NegativeSOACacheTime', type: REG_DWORD, data: '0'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters', value: 'MaximumUdpPacketSize', type: REG_DWORD, data: '1300'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\ServiceProvider', value: 'Class', type: REG_DWORD, data: '8'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\ServiceProvider', value: 'DnsPriority', type: REG_DWORD, data: '6'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\ServiceProvider', value: 'HostsPriority', type: REG_DWORD, data: '5'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\ServiceProvider', value: 'LocalPriority', type: REG_DWORD, data: '4'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\ServiceProvider', value: 'NetbtPriority', type: REG_DWORD, data: '7'}
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\NDIS\Parameters', value: 'MaxNumRssCpus', type: REG_DWORD, data: '4'}
+  - !writeStatus: {status: "Tweaking Internet through Registry..."}
+  - !run:
+  exeDir: true
+  exe: "Internet.bat"
+  weight: 30
