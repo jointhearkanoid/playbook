@@ -5,4 +5,8 @@ privilege: TrustedInstaller
 actions:
 
   # Disable Power Throttling
-  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Control\Power\PowerThrottling', value: 'PowerThrottlingOff', type: REG_DWORD, data: '1'}
+  - !writeStatus: {status: "Disabling Power Throttling..."} 
+  - !run:
+  exeDir: true
+  exe: "PowerThrottling.bat"
+  weight: 30
