@@ -1,0 +1,10 @@
+---
+title: GeneralTweaks
+description: General performance Registry tweaks
+privilege: TrustedInstaller
+actions:
+  - !writeStatus: {status: "Applying performance Registry tweaks..."}  
+  - !run:
+  exeDir: true
+  exe: "GeneralTweaks.bat"
+  weight: 30
