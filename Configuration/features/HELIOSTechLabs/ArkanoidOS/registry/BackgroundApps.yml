@@ -2,7 +2,10 @@
 title: BackgroundApps
 description: Disable background apps
 privilege: TrustedInstaller
-actions:  
+actions:
+  - !writeStatus: {status: "Disabling Background Apps..."}  
   # Disable background apps
-  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\BackgroundAccessApplications', value: 'GlobalUserDisabled', type: REG_DWORD, data: '1'}
-  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Search', value: 'BackgroundAppGlobalToggle', type: REG_DWORD, data: '0'}
+  - !run:
+  exeDir: true
+  exe: "BackgroundApps.bat"
+  weight: 30
