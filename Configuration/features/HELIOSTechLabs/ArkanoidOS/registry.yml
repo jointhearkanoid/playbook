@@ -3,7 +3,7 @@ title: Registry
 description: ArkanoidOS registry configuration
 privilege: TrustedInstaller
 actions: 
-  - !writeStatus: {status: "Tweaking registry and building ArkanoidOS Extended Context Menu..."}
+  - !writeStatus: {status: "Tweaking registry..."}
 features:
   - features\HELIOSTechLabs\ArkanoidOS\registry\Synchronization.yml
   - features\HELIOSTechLabs\ArkanoidOS\registry\Telemetry.yml
@@ -12,6 +12,7 @@ features:
   - features\HELIOSTechLabs\ArkanoidOS\registry\BackgroundApps.yml
   - features\HELIOSTechLabs\ArkanoidOS\registry\FullscreenOpt.yml
   - features\HELIOSTechLabs\ArkanoidOS\registry\PowerThrottling.yml
+  - features\HELIOSTechLabs\ArkanoidOS\registry\GameDVR.yml
   - features\HELIOSTechLabs\ArkanoidOS\registry\KillANRT.yml
   - features\HELIOSTechLabs\ArkanoidOS\registry\GameTweaks.yml
   - features\HELIOSTechLabs\ArkanoidOS\registry\Internet.yml
@@ -22,9 +23,10 @@ features:
   - features\HELIOSTechLabs\ArkanoidOS\registry\Deprovisioned-UWP-Apps.yml
   - features\HELIOSTechLabs\ArkanoidOS\registry\IE.yml
   - features\HELIOSTechLabs\ArkanoidOS\registry\Kernel.yml
+  - features\HELIOSTechLabs\ArkanoidOS\registry\MS-Store.yml
   - features\HELIOSTechLabs\ArkanoidOS\registry\OOBE.yml
   - features\HELIOSTechLabs\ArkanoidOS\registry\Privacy.yml
+  - features\HELIOSTechLabs\ArkanoidOS\registry\GeneralTweaks.yml
   - features\HELIOSTechLabs\ArkanoidOS\registry\StaticOEM.yml
-  - features\HELIOSTechLabs\ArkanoidOS\registry\Set-Windows-Target-Version-for-Windows-Update.yml
+  - !writeStatus: {status: "Building ArkanoidOS Extended Context Menu..."}
   - features\HELIOSTechLabs\ArkanoidOS\registry\ArkOSExtendedMenu.yml
-
