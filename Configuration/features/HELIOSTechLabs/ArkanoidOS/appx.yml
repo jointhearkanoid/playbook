@@ -4,7 +4,7 @@ description: Remove unnecessary Metro Apps UWP from Windows 10/11
 privilege: TrustedInstaller
 actions:
 
-  - !writeStatus: {status: "Removing Metro UWP Apps..."}
+  - !writeStatus: {status: "Removing Metro UWP Apps"}
   - !appx: {name: '*Microsoft.ZuneMusic*', type: family}
   - !appx: {name: '*Microsoft.ZuneVideo*', type: family}
   - !appx: {name: '*OneNote*', type: family}
