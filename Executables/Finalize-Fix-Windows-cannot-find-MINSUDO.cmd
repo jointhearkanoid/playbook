@@ -1,7 +1,8 @@
 :: Forked from Revision Playbook official GitHub's repo (https://github.com/meetrevision/playbook)
 :: Go check them out at https://revi.cc/
 @echo off
-set version=23.12
+set edition=Lite
+set "version=v15.0 (AME Wizard Playbook Version)"
 for /f "tokens=2 delims==" %%i in ('wmic os get BuildNumber /value ^| find "="') do set "build=%%i"
 if %build% gtr 19045 ( set "w11=true" )
 
@@ -22,13 +23,13 @@ rmdir /s /q "%ProgramW6432%\\PCHealthCheck" >NUL 2>nul
 rmdir /s /q "%ProgramFiles(x86)%\WindowsInstallationAssistant" >NUL 2>nul
 
 if not defined w11 (
-	bcdedit /set description "ReviOS 10 %version%" >NUL 2>nul
-  reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OEMInformation" /v "Model"  /t REG_SZ /d "ReviOS 10 %version%" /f >NUL 2>nul
-  reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion" /v "RegisteredOrganization" /t REG_SZ /d "ReviOS 10 %version%" /f >NUL 2>nul
+	bcdedit /set description "ArkanoidOS 10 %edition% %version%" >NUL 2>nul
+  reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OEMInformation" /v "Model"  /t REG_SZ /d "ArkanoidOS 10 %edition% %version%" /f >NUL 2>nul
+  reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion" /v "RegisteredOrganization" /t REG_SZ /d "ArkanoidOS 10 %edition% %version%" /f >NUL 2>nul
 ) else (
-	bcdedit /set description "ReviOS 11 %version%" >NUL 2>nul
-  reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OEMInformation" /v "Model"  /t REG_SZ /d "ReviOS 11 %version%" /f >NUL 2>nul
-  reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion" /v "RegisteredOrganization" /t REG_SZ /d "ReviOS 11 %version%" /f >NUL 2>nul
+	bcdedit /set description "ArkanoidOS 11 %edition% %version%" >NUL 2>nul
+  reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OEMInformation" /v "Model"  /t REG_SZ /d "ArkanoidOS 11 %edition% %version%" /f >NUL 2>nul
+  reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion" /v "RegisteredOrganization" /t REG_SZ /d "ArkanoidOS 11 %edition% %version%" /f >NUL 2>nul
 )
 
 @REM PowerShell -NonInteractive -NoLogo -NoP -C "Get-CimInstance -Namespace "Root\cimv2\mdm\dmmap" -ClassName "MDM_EnterpriseModernAppManagement_AppManagement01" | Invoke-CimMethod -MethodName UpdateScanMethod" >NUL 2>nul
@@ -37,7 +38,7 @@ echo Configuring power settings
 powercfg /hibernate off >NUL 2>nul
 powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61 >NUL 2>nul
 powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61 3ff9831b-6f80-4830-8178-736cd4229e7b >NUL 2>nul
-powercfg -changename 3ff9831b-6f80-4830-8178-736cd4229e7b "Revision - Ultra Performance" "Windows's Ultimate Performance with additional changes." >NUL 2>nul
+powercfg -changename 3ff9831b-6f80-4830-8178-736cd4229e7b "ArkanoidOS - Ultra Performance" "Windows's Ultimate Performance with additional changes." >NUL 2>nul
 powercfg -s 3ff9831b-6f80-4830-8178-736cd4229e7b >NUL 2>nul
 powercfg -setacvalueindex scheme_current sub_processor PERFINCPOL 2 >NUL 2>nul
 powercfg -setacvalueindex scheme_current sub_processor PERFDECPOL 1 >NUL 2>nul
@@ -87,14 +88,6 @@ powershell -NonInteractive -NoLogo -NoProfile Set-ProcessMitigation -Name vgc.ex
 :: - !run: {exeDir: true, exe: 'powershell -windowstyle hidden -ExecutionPolicy Bypass -C "& ''./MC_PM.ps1''"'}
 setx DOTNET_CLI_TELEMETRY_OPTOUT 1
 setx POWERSHELL_TELEMETRY_OPTOUT 1
-
-echo Disabling Superfetch for SSD...
-
-for /f %%i in ('PowerShell -NonInteractive -NoLogo -NoP -C "(Get-PhysicalDisk -SerialNumber (Get-Disk -Number (Get-Partition -DriveLetter $env:SystemDrive.Substring(0, 1)).DiskNumber).SerialNumber.TrimStart()).MediaType"') do set "hardDrive=%%i"
-
-if "%hardDrive%"=="SSD" (
-  @start /b "" "%programfiles(x86)%\Revision Tool\data\flutter_assets\additionals\DisableSF.bat"
-)
 
 echo Configuring animations
 
