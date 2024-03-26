@@ -3,7 +3,7 @@ title: Packages
 description: Removes system packages
 privilege: TrustedInstaller
 actions:
-  - !writeStatus: {status: "Removing system packages..."}
+  - !writeStatus: {status: "Removing system packages"}
   - !systemPackage: {name: 'Microsoft-Windows-AcProxy', arch: amd64, language: 'neutral'}
   - !systemPackage: {name: 'Microsoft-Windows-CEIPEnable-Adm', arch: amd64, language: 'neutral'}
   - !systemPackage: {name: 'Microsoft-Windows-Client-SQM-Consolidator', arch: amd64, language: 'neutral'}
