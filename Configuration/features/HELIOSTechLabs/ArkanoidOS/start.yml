@@ -28,7 +28,7 @@ actions:
       ignoreErrors: true
 
   - !writeStatus:
-      status: "Initializing pre-hardcore Playbook implementation tasks..."
+      status: "Initializing pre-hardcore Playbook implementation tasks"
     # Prevent annoying notifications during deployment
   - !registryValue:
       path: "HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Notifications\\Settings\\Windows.SystemToast.SecurityAndMaintenance"
