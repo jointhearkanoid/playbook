@@ -3,7 +3,7 @@ title: Registry
 description: ArkanoidOS registry configuration
 privilege: TrustedInstaller
 actions: 
-  - !writeStatus: {status: "Tweaking registry..."}
+  - !writeStatus: {status: "Tweaking registry"}
 features:
   - features\HELIOSTechLabs\ArkanoidOS\registry\Synchronization.yml
   - features\HELIOSTechLabs\ArkanoidOS\registry\Telemetry.yml
