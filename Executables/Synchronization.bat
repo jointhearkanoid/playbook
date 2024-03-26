@@ -1,20 +1,20 @@
 @echo off
 setlocal
 
-:: Navegar a la clave del Registro y obtener el valor de EditionID
+:: Navigate to the registry key and get the EditionID value
 for /f "tokens=3" %%a in ('reg query "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion" /v EditionID 2^>nul ^| find "EditionID"') do (
     set "EditionID=%%a"
 )
 
-:: Verificar el valor de EditionID y realizar las acciones correspondientes
+:: Check the value of EditionID and take corresponding actions
 if /i "%EditionID%"=="Professional" (
     reg import "2. Deshabilitar Sincronización.reg"
     goto :end
-) elseif /i "%EditionID%"=="Home" (
+) else if /i "%EditionID%"=="Core" (
     REGEDIT /s "2. Deshabilitar Sincronización.reg"
     goto :end
 ) else (
-    echo La edición no coincide con ninguna acción definida.
+    echo Edition does not match any defined action.
 )
 
 :end
