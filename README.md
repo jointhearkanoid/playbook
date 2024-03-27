@@ -5,6 +5,10 @@
 
 ArkanoidOS is a customized version of Windows, which aims to a very simple objective: being a fast and lightweight but, at the same time, highly customizable, attractive, version-wide, portable, feature-rich and user-oriented operating system. It aspires to provide an user-oriented and modular-like experience for all kinds of PCs, from extreme low-end PCs to the most highest end PCs. Now compatible with [AME Wizard](https://ameliorated.io).
 
+We're so grateful with [Revision Project](https://revi.cc) for licensing their Playbooks under Creative Commons CC-BY-NC-SA 4.0 License and for making such amazing Playbooks as (kind of) a replacement for ISOs. Without them, and their amazing work behind the Playbooks, our own Playbooks would have never came to life, so... be sure going to support them! [Revision Project](https://revi.cc) - [ReviOS Official & Verified Playbooks](https://github.com/meetrevision/playbook)
+
+ArkanoidOS's Playbooks are forks of [Revision Project's ReviOS Official & Verified Playbooks](https://github.com/meetrevision/playbook)
+
 ## Features
 
 - Easy to use, just drag and drop the playbook into [AME Wizard](https://ameliorated.io)
